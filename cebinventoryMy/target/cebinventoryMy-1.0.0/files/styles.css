@@ -1,0 +1,82 @@
+html,body,div,p {
+	font-size:14px;
+	color:#666666;
+	width: 1290px;
+	padding: 0;
+	margin: 0;
+}
+form, input {margin:0;padding:0;}
+body{font-family:arial,sans-serif}
+img {border:0px;}
+a {color:#333333;}
+a:hover {color: #ec9922;}
+div#men {
+	height:23px;
+	background:#424141;
+	padding-left:175px;
+	font-size:9px;
+	margin-left: 0px;
+	width: 1250px;
+}
+div#men a {float:left;text-transform:uppercase;display:block;padding:5px 8px 0;color:#fff;text-decoration:none;height:18px;background:#626161 url(/img/mis_puntv.gif) right repeat-y;}
+div#men a:hover {color:#231f20;text-decoration:none;background:#9e9b9b url(/img/mis_puntv.gif) right repeat-y;}
+div#men a.ult {background:#626161;}
+div#men a.ult:hover {background:#9e9b9b;}
+div#hea {height:45px;}
+div#pri {
+	float:left;
+	width:auto;
+	margin-left: 125px;
+}
+div#con_int {padding:20px 50px;}
+div#caja {float:left;width:350px;}
+div#caja_int {padding:0px 0px;}
+div#imgctdo {float:right;width:30%;}
+div#fja {height:12px;background:#CCC;}
+div#con_fja {
+	background:#CCC;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 175px;
+	width: 1000px;
+}
+
+/* Home */
+div#hom_hea {background:#048088; background:url(/img/img_fdo_medical.jpg)}
+div#hom_fja {
+	font-size:13px;
+	color:#666;
+	font-weight:bold;
+	background:#CCC;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0;
+	margin-left: 0px;
+}
+.hom_titulo {font-size:24px;font-weight:bold;color:#999999;}
+.hom_tituloverde {font-size:24px;font-weight:bold;color:#048088;}
+.hom_tit {font-size:14px;font-weight:bold;color:#6bb82c;}
+.hom_titverde {font-size:14px;font-weight:bold;color:#048088;}
+.hom_txt {font-size:12px;font-weight:normal;color:#666666;}
+.hom_txtbold {font-size:12px;font-weight:bold;color:#000000;}
+.hom_des {font-size:14px;font-weight:bold;border:1px solid #6bb82c;margin:25px 0;line-height:16px;color:#6bb82c;}
+.hom_gra {font-size:14px;background-color:#f0f0f0;padding:10px;margin:5px 20px 0;line-height:18px;border:1px solid #CCC;}
+.hom_subtitulo {font-size:16px;font-weight:bold;color:#ec9922;}
+.hom_tit_caja {font-size:11px;font-weight:bold;color:#048088;}
+.hom_txt_caja {font-size:11px;font-weight:bold;color:#666666;}
+
+/* Contenidos */
+div#hom_ctdo {background:#000000;}
+.hom_tit {font-size:12px;font-weight:bold;color:#048088;}
+.hom_caja {font-size:14px;background-color:#ebebeb;padding:10px;margin:5px 20px 0;line-height:18px;border:1px solid #94b8ba;}
+
+
+/* Lista */
+div#lista_sol {height:400px;margin-bottom:10px;}
+div#lista_sol ul {list-style:none;margin:0;padding:20px 0 0;}
+div#lista_sol li {width:650px;display:block;padding:8px 30px;color:#626161;text-decoration:none;height:10px;background:url(/img/img_item.gif) 15px 10px no-repeat;}
+div#lista_sol li a.ult {border-bottom:none;}
+.lista {font-family:arial,sans-serif; font-size:13px;color:#048088;}

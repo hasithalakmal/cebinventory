@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="category_item_master" table="category_item_master">
+    <composite-id>
+      <key-property name="category_code">
+        <column name="category_code"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+    </composite-id>
+    <property column="item" name="item"/>
+    <property column="category" name="category"/>
+  </class>
+  <class name="stock_category_item" table="stock_category_item">
+    <composite-id>
+      <key-property name="category_code">
+        <column name="category_code"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+    </composite-id>
+    <property column="item" name="item"/>
+    <property column="category" name="category"/>
+  </class>
+  <class name="category_item_last" table="category_item_last">
+    <composite-id>
+      <key-property name="category">
+        <column name="category"/>
+      </key-property>
+      <key-property name="item">
+        <column name="item"/>
+      </key-property>
+      <key-property name="last">
+        <column name="last"/>
+      </key-property>
+    </composite-id>
+  </class>
+  <class name="item_master" table="item_master">
+    <id column="item_code" name="item_code">
+    </id>
+    <property column="item_name" name="item_name"/>
+    <property column="composite" name="composite"/>
+    <property column="composite_code" name="composite_code"/>
+    <property column="status" name="status"/>
+    <property column="is_inventory" name="is_inventory"/>
+    <property column="is_capital" name="is_capital"/>
+    <property column="price" name="price"/>
+    <property column="value" name="value"/>
+    <property column="depreciation_rate" name="depreciation_rate"/>
+    <property column="serial_number" name="serial_number"/>
+    <property column="critical" name="critical"/>
+    <property column="unit_of_measure" name="unit_of_measure"/>
+    <property column="image" name="image"/>
+    <property column="remarks" name="remarks"/>
+    <property column="safety_stock" name="safety_stock"/>
+    <property column="reorder_level" name="reorder_level"/>
+    <property column="maximum_stock" name="maximum_stock"/>
+    <property column="abc" name="abc"/>
+    <property column="warranty_expiry_date" name="warranty_expiry_date" type="date"/>
+    <property column="service_start_date" name="service_start_date"/>
+    <property column="service_end_date" name="service_end_date" type="date"/>
+    <property column="lead_time" name="lead_time"/>
+    <property column="vendor" name="vendor"/>
+    <property column="location" name="location"/>
+  </class>
+  <class name="owner_item_master" table="owner_item_master">
+    <composite-id>
+      <key-property name="user_name">
+        <column name="user_name"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+      <key-property name="status">
+        <column name="status"/>
+      </key-property>
+    </composite-id>
+    <property column="cost_id" name="cost_id"/>
+    <property column="section_id" name="section_id"/>
+    <property column="quantity" name="quantity"/>
+    <property column="unit_of_measure" name="unit_of_measure"/>
+    <property column="freeze" name="freeze"/>
+    <property column="lended" name="lended"/>
+    <property column="conflict_flag" name="conflict_flag"/>
+  </class>
+  <class name="stock_item_last" table="stock_item_last">
+    <composite-id>
+      <key-property name="category">
+        <column name="category"/>
+      </key-property>
+      <key-property name="item">
+        <column name="item"/>
+      </key-property>
+      <key-property name="last">
+        <column name="last"/>
+      </key-property>
+    </composite-id>
+  </class>
+  <class name="request_item" table="request_item">
+    <id column="request_id" name="request_id">
+    </id>
+    <property column="user_name" name="user_name"/>
+    <property column="item_description" name="item_description"/>
+    <property column="quantity" name="quantity"/>
+    <property column="remarks" name="remarks"/>
+    <property column="date" name="date"/>
+    <property column="approved" name="approved"/>
+  </class>
+  <class name="transaction_detail" table="transaction_detail">
+    <composite-id>
+      <key-property name="doc_number">
+        <column name="doc_number"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+    </composite-id>
+    <property column="unit_of_measure" name="unit_of_measure"/>
+    <property column="quantity" name="quantity"/>
+    <property column="wbno" name="wbno"/>
+    <property column="status" name="status"/>
+  </class>
+  <class name="transaction_header" table="transaction_header">
+    <id column="doc_number" name="doc_number">
+    </id>
+    <property column="doc_date" name="doc_date"/>
+    <property column="transaction_type" name="transaction_type"/>
+    <property column="user_name" name="user_name"/>
+    <property column="issue_to" name="issue_to"/>
+    <property column="status" name="status"/>
+    <property column="request_no" name="request_no"/>
+    <property column="remarks" name="remarks"/>
+  </class>
+  <class name="owner" table="owner">
+    <id column="user_name" name="user_name"/>
+    <property column="owner_first_name" name="owner_first_name"/>
+    <property column="cost_id" name="cost_id"/>
+    <property column="status" name="status"/>
+    <property column="password" name="password"/>
+    <property column="owner_last_name" name="owner_last_name"/>
+    <property column="section_id" name="section_id"/>
+    <property column="email" name="email"/>
+    <property column="user_role" name="user_role"/>
+    <property column="approved" name="approved"/>
+  </class>
+  <class name="openning_stock" table="openning_stock">
+    <composite-id>
+      <key-property name="doc_number">
+        <column name="doc_number"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+    </composite-id>
+    <property column="quantity" name="quantity"/>
+    <property column="status" name="status"/>
+    <property column="owner" name="owner"/>
+    <property column="receive_date" name="receive_date"/>
+    <property column="item_name" name="item_name"/>
+    <property column="doc_date" name="doc_date"/>
+    <property column="company" name="company"/>
+    <property column="reference" name="reference"/>
+    <property column="confirmed" name="confirmed"/>
+  </class>
+  <class name="verification" table="verification">
+    <composite-id>
+      <key-property name="verification_no">
+        <column name="verification_no"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+      <key-property name="user_name">
+        <column name="user_name"/>
+      </key-property>
+      <key-property name="requested_status">
+        <column name="requested_status"/>
+      </key-property>
+      <key-property name="status">
+        <column name="status"/>
+      </key-property>
+    </composite-id>
+    <property column="actual_quantity" name="actual_quantity"/>
+    <property column="date" name="date"/>
+    <property column="available_quantity" name="available_quantity"/>
+    <property column="remarks" name="remarks"/>
+    <property column="approved" name="approved"/>
+  </class>
+  <class name="adjustments" table="adjustments">
+    <composite-id>
+      <key-property name="adjustment_no">
+        <column name="adjustment_no"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+      <key-property name="user_name">
+        <column name="user_name"/>
+      </key-property>
+      <key-property name="status">
+        <column name="status"/>
+      </key-property>
+    </composite-id>
+    <property column="actual_quantity" name="actual_quantity"/>
+    <property column="available_quantity" name="available_quantity"/>
+    <property column="remarks" name="remarks"/>
+    <property column="approved" name="approved"/>
+  </class>
+  <class name="section_master" table="section_master">
+    <composite-id>
+      <key-property name="section_id">
+        <column name="section_id"/>
+      </key-property>
+      <key-property name="centre_id">
+        <column name="centre_id"/>
+      </key-property>
+    </composite-id>
+    <property column="section_name" name="section_name"/>
+    <property column="status" name="status"/>
+    <property column="center_name" name="center_name"/>
+  </class>
+  <class name="status_change_requests" table="status_change_requests">
+    <composite-id>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+      <key-property name="user_name">
+        <column name="user_name"/>
+      </key-property>
+      <key-property name="date">
+        <column name="date"/>
+      </key-property>
+    </composite-id>
+    <property column="current_status" name="current_status"/>
+    <property column="requested_status" name="requested_status"/>
+    <property column="description" name="description"/>
+    <property column="cause" name="cause"/>
+    <property column="quantity" name="quantity"/>
+    <property column="available_quantity" name="available_quantity"/>
+    <property column="approved" name="approved"/>
+  </class>
+  <class name="auctioning_list" table="auctioning_list">
+    <composite-id>
+      <key-property name="auction_no">
+        <column name="auction_no"/>
+      </key-property>
+      <key-property name="user_name">
+        <column name="user_name"/>
+      </key-property>
+      <key-property name="item_code">
+        <column name="item_code"/>
+      </key-property>
+      <key-property name="status">
+        <column name="status"/>
+      </key-property>
+    </composite-id>
+    <property column="quantity" name="quantity"/>
+    <property column="remarks" name="remarks"/>
+    <property column="price" name="price"/>
+    <property column="value" name="value"/>
+    <property column="selling_price" name="selling_price"/>
+    <property column="cause_for_auction" name="cause_for_auction"/>
+    <property column="approved" name="approved"/>
+  </class>
+</hibernate-mapping>
